@@ -253,7 +253,7 @@ nav a.nav-active::after {
 
 .section {
     text-align: center;
-    margin: 30px 0;
+    margin: 12px 0;
     padding: 2px 0;
     width: 100%; /* Убедимся, что секция не переполняет */
 }
@@ -1016,25 +1016,37 @@ form input:focus {
     .testimonial-slider {
         padding: 0; /* Убираем горизонтальный padding из слайдера */
         width: 100%;
+        overflow: hidden; /* Оставляем overflow: hidden для слайдера */
     }
 
     .testimonials {
-         width: 100%;
+        display: flex; /* Убедимся, что это flex-контейнер */
+        transition: transform 0.5s ease;
+        width: 100%;
     }
 
     .testimonial {
         flex-direction: column; /* Располагаем элементы вертикально */
         align-items: center; /* Центрируем по горизонтали */
-        width: 90%; /* Отзыв занимает 90% ширины родителя */
+        width: 100%; /* Отзыв занимает 90% ширины родителя */
         margin: 0 auto; /* Центрируем отзыв */
         margin-bottom: 10px; /* Отступ между отзывами */
         padding: 15px; /* Добавляем padding */
         min-width: auto; /* Убедимся, что не переопределяется min-width: 100% */
+        flex-shrink: 0; 
     }
 
     .client-photo {
         margin-right: 0;
         margin-bottom: 10px;
+        flex-shrink: 0; /* Убедимся, что фото не сжимается */
+    }
+    .testimonial-content {
+        flex-direction: column; /* Располагаем контент отзыва вертикально */
+        align-items: center; /* Центрируем контент по горизонтали */
+        text-align: center; /* Центрируем текст */
+        flex-grow: 1;
+        width: 100%; /* Убедимся, что контент занимает всю ширину родительского testimonial */
     }
 
     .testimonial blockquote,
@@ -1042,6 +1054,7 @@ form input:focus {
         text-align: center; /* Центрируем текст */
         width: 100%; /* Занимаем всю доступную ширину */
         padding: 0 5px; /* Добавляем padding для текста */
+        margin: 5px 0; /* Добавляем вертикальные отступы между blockquote и p */
     }
 
 

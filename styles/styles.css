@@ -253,7 +253,7 @@ nav a.nav-active::after {
 
 .section {
     text-align: center;
-    margin: 12px 0;
+    margin: 30px 0;
     padding: 2px 0;
     width: 100%; /* Убедимся, что секция не переполняет */
 }

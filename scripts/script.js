@@ -104,7 +104,7 @@ $(document).ready(function() {
         }
 
         const phoneDigits = phone.replace(/\D/g, '');
-        const requiredDigits = 10;
+        const requiredDigits = 11;
         if (phoneDigits.length !== requiredDigits) {
             errorDiv.html(`Пожалуйста, введите правильный номер телефона с ${requiredDigits} цифрами.`).show();
             return;

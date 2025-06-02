@@ -416,10 +416,10 @@ form {
 }
 
 form input {
-    padding: 3px;
+    padding: 10px;
     border: 1px solid #0c0505;
     border-radius: 1px;
-    font-size: 4px;
+    font-size: 15px;
     width: 100%; /* Поля ввода занимают 100% ширины формы */
     margin: 7.5px 0;
 }
